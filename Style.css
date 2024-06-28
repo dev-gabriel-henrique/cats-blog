@@ -36,6 +36,7 @@ header {
 
   background-color: var(--bg-blue-dark);
   color: white;
+  grid-area: header;
 }
 
 header form {
@@ -73,7 +74,11 @@ h1, h2 {
 
 #app {
   display: grid;
-  grid-template-rows: max-content, 1fr, max-content;
+  grid-template-areas: 
+  "header"
+  "main "
+  "aside"
+  "footer";
   height: 100vh;
 }
 
@@ -88,6 +93,7 @@ section {
 
 main .container {
   padding: 0 2.6rem;
+  grid-area: main;
 }
 
  main img {
@@ -136,6 +142,7 @@ main .container p {
 aside {
   padding-inline: 2.4rem;
   margin-bottom: 3.9rem;
+  grid-area: aside;
 }
 
 aside h1 {
@@ -183,6 +190,7 @@ footer {
   background-color: var(--bg-blue-light);
   padding: 2.6rem 1.6rem;
   text-align: center;
+  grid-area: footer;
 }
 
 footer p {
